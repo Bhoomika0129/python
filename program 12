@@ -1,0 +1,17 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+#sample data:replace this with actual data reading
+data={'age':[25,30,35,40,45,50,55,60,65,70],'department':['HR','IT','FINANCE','HR','HR','FINANCE','IT','FINANCE','HR','FINANCE'],'salary':[20000,30000,35000,40000,45000,50000,55000,60000,65000,70000]}
+df=pd.DataFrame(data)
+#set the seaborn style for the plot
+sns.set(style="whitegrid")
+#create box and whisker plot
+plt.figure(figure=[8,6])
+sns.boxplot(data=df,x='department',y='salary',palette="Set2")
+
+#set titles and labels
+plt.title("box and whiskers plot of salary by department")
+plt.xlabel("department")
+plt.ylabel("salary")
+plt.show()
